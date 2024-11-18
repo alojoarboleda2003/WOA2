@@ -234,9 +234,6 @@ class Arquero(Personaje):
         # Asegurarnos de que no supere los puntos de vida originales
         if objetivo.puntos_vida > objetivo.vida_original:
             objetivo.puntos_vida = objetivo.vida_original
-        if self.cont_flechas_curativas>0:
-            estadoObjetivo, objetivo = self.realizar_ataque(objetivo, "healing arrow")
-            self.cont_flechas_curativas -=1
         print(f"{self.nombre} ha disparado una flecha curativa a {objetivo.nombre} y le ha restaurado {curacion} punto de vida!")
         
     def crear_flecha_curativa(self):
